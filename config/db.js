@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 const db = config.get('mongoURI');
 
+// Using promises and .then
 // const connectDB = () => {
 //     mongoose.connect(db, {
 //         useNewUrlParser: true,
@@ -15,6 +16,7 @@ const db = config.get('mongoURI');
 //     })
 // }
 
+// Using async await
 const connectDB = async () => {
     try {
         mongoose.connect(db, {
