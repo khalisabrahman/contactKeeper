@@ -76,18 +76,21 @@ const ContactState = props => {
 
     // Clear Filter
     const clearFilter = () => {
-        dispatch({ type: CLEAR_CURRENT });
+        dispatch({ type: CLEAR_FILTER });
     };
 
     return (
         <ContactContext.Provider value={{
             contacts: state.contacts,
             current: state.current,
+            filtered: state.filtered,
             addContact,
             deleteContact,
             setCurrent,
             clearCurrent,
-            updateContact
+            updateContact,
+            filterContacts,
+            clearFilter
         }}>
             {props.children}
         </ContactContext.Provider>
