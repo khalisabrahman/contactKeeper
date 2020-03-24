@@ -54,7 +54,7 @@ router.post('/', [
            res.json({token});
        });
 
-    } catch (error) {
+    } catch (err) {
         console.error(err.msg);
         res.status(500).send('Server Error');
     }
